@@ -12,7 +12,7 @@ class UsersController extends Controller
     //用户授权
     public function __construct(){
 
-        $this->middleware();
+        //$this->middleware();
     }
 
     //个人首页
