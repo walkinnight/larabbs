@@ -37,6 +37,7 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
         '4a1f389d6ce373bda9e57857d3b61c84' => __DIR__ . '/..' . '/barryvdh/laravel-debugbar/src/helpers.php',
         '5e8fe2a5ffaded85af682684fe3bbf5a' => __DIR__ . '/..' . '/mews/captcha/src/helpers.php',
         'f960e77410032f236cef8c56617b313e' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/helpers.php',
+        'a3a61d13a0bfb8e36cb789c5fbfdf8cf' => __DIR__ . '/..' . '/summerblue/laravel-active/src/helpers.php',
         'b4e3f29b106af37a2bb239f73cdf68c7' => __DIR__ . '/../..' . '/app/helpers.php',
     );
 
@@ -138,6 +139,11 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
             'Intervention\\Image\\' => 19,
             'Illuminate\\Foundation\\Auth\\' => 27,
             'Illuminate\\' => 11,
+        ),
+        'H' => 
+        array (
+            'HieuLe\\Active\\' => 14,
+            'HieuLe\\ActiveTest\\' => 18,
         ),
         'G' => 
         array (
@@ -423,6 +429,14 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
         array (
             0 => __DIR__ . '/..' . '/laravel/framework/src/Illuminate',
         ),
+        'HieuLe\\Active\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/summerblue/laravel-active/src',
+        ),
+        'HieuLe\\ActiveTest\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/summerblue/laravel-active/tests',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -544,6 +558,7 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\CategoriesController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoriesController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\PagesController' => __DIR__ . '/../..' . '/app/Http/Controllers/PagesController.php',
         'App\\Http\\Controllers\\TopicsController' => __DIR__ . '/../..' . '/app/Http/Controllers/TopicsController.php',
@@ -1658,6 +1673,14 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
         'Hamcrest\\Type\\IsString' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Type/IsString.php',
         'Hamcrest\\Util' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Util.php',
         'Hamcrest\\Xml\\HasXPath' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Xml/HasXPath.php',
+        'HieuLe\\ActiveTest\\ActiveTest' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/ActiveTest.php',
+        'HieuLe\\ActiveTest\\Http\\DumpController' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/Http/DumpController.php',
+        'HieuLe\\ActiveTest\\Http\\DumpMiddleware' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/Http/DumpMiddleware.php',
+        'HieuLe\\ActiveTest\\Http\\Kernel' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/Http/Kernel.php',
+        'HieuLe\\ActiveTest\\StubModel' => __DIR__ . '/..' . '/summerblue/laravel-active/tests/StubModel.php',
+        'HieuLe\\Active\\Active' => __DIR__ . '/..' . '/summerblue/laravel-active/src/Active.php',
+        'HieuLe\\Active\\ActiveServiceProvider' => __DIR__ . '/..' . '/summerblue/laravel-active/src/ActiveServiceProvider.php',
+        'HieuLe\\Active\\Facades\\Active' => __DIR__ . '/..' . '/summerblue/laravel-active/src/Facades/Active.php',
         'Highlight\\Autoloader' => __DIR__ . '/..' . '/scrivo/highlight.php/Highlight/Autoloader.php',
         'Highlight\\HighlightResult' => __DIR__ . '/..' . '/scrivo/highlight.php/Highlight/HighlightResult.php',
         'Highlight\\Highlighter' => __DIR__ . '/..' . '/scrivo/highlight.php/Highlight/Highlighter.php',
