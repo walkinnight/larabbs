@@ -11,9 +11,9 @@ class UsersController extends Controller
 {
 
     //用户授权
-    public function __construct(){
-
-        //$this->middleware();
+    public function __construct()
+    {
+        $this->middleware('auth', ['except' => ['show']]);
     }
 
     //个人首页
@@ -24,12 +24,13 @@ class UsersController extends Controller
 
     //编辑资料页面
     public function edit(User $user){
+        $this->authorize('update', $user);
         return view('users.edit',compact('user'));
     }
 
     //更新用户信息
     public function update(Request $request, ImageUploadHandler $uploader,User $user){
-
+        $this->authorize('update', $user);
         $data = $request->all();
 
         if ($request->avatar) {
