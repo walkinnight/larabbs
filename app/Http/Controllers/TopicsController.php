@@ -6,6 +6,7 @@ use App\Models\Topic;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
+use App\Models\Category;
 
 class TopicsController extends Controller
 {
@@ -27,10 +28,11 @@ class TopicsController extends Controller
         return view('topics.show', compact('topic'));
     }
 
-	public function create(Topic $topic)
-	{
-		return view('topics.create_and_edit', compact('topic'));
-	}
+    public function create(Topic $topic)
+    {
+        $categories = Category::all();
+        return view('topics.create_and_edit', compact('topic', 'categories'));
+    }
 
 	public function store(TopicRequest $request)
 	{
