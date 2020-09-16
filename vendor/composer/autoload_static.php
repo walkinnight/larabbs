@@ -39,6 +39,7 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
         '5e8fe2a5ffaded85af682684fe3bbf5a' => __DIR__ . '/..' . '/mews/captcha/src/helpers.php',
         'cb61d74ad51d00867155534456b38b23' => __DIR__ . '/..' . '/mews/purifier/src/helpers.php',
         'f960e77410032f236cef8c56617b313e' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/helpers.php',
+        'dc1275c308c5b416beb314b6317daca2' => __DIR__ . '/..' . '/overtrue/pinyin/src/const.php',
         'a3a61d13a0bfb8e36cb789c5fbfdf8cf' => __DIR__ . '/..' . '/summerblue/laravel-active/src/helpers.php',
         'b4e3f29b106af37a2bb239f73cdf68c7' => __DIR__ . '/../..' . '/app/helpers.php',
     );
@@ -116,6 +117,7 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
         ),
         'O' => 
         array (
+            'Overtrue\\Pinyin\\' => 16,
             'Overtrue\\LaravelLang\\' => 21,
             'Opis\\Closure\\' => 13,
         ),
@@ -380,6 +382,10 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
         array (
             0 => __DIR__ . '/..' . '/phpoption/phpoption/src/PhpOption',
         ),
+        'Overtrue\\Pinyin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/overtrue/pinyin/src',
+        ),
         'Overtrue\\LaravelLang\\' => 
         array (
             0 => __DIR__ . '/..' . '/overtrue/laravel-lang/src',
@@ -563,6 +569,7 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Handlers\\ImageUploadHandler' => __DIR__ . '/../..' . '/app/Handlers/ImageUploadHandler.php',
+        'App\\Handlers\\SlugTranslateHandler' => __DIR__ . '/../..' . '/app/Handlers/SlugTranslateHandler.php',
         'App\\Http\\Controllers\\Auth\\ConfirmPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmPasswordController.php',
         'App\\Http\\Controllers\\Auth\\ForgotPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ForgotPasswordController.php',
         'App\\Http\\Controllers\\Auth\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/LoginController.php',
@@ -3467,6 +3474,11 @@ class ComposerStaticInitff6ec6a1c847e7dc865002d4afae8c0d
         'Overtrue\\LaravelLang\\Commands\\Publish' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/Commands/Publish.php',
         'Overtrue\\LaravelLang\\FileLoader' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/FileLoader.php',
         'Overtrue\\LaravelLang\\TranslationServiceProvider' => __DIR__ . '/..' . '/overtrue/laravel-lang/src/TranslationServiceProvider.php',
+        'Overtrue\\Pinyin\\DictLoaderInterface' => __DIR__ . '/..' . '/overtrue/pinyin/src/DictLoaderInterface.php',
+        'Overtrue\\Pinyin\\FileDictLoader' => __DIR__ . '/..' . '/overtrue/pinyin/src/FileDictLoader.php',
+        'Overtrue\\Pinyin\\GeneratorFileDictLoader' => __DIR__ . '/..' . '/overtrue/pinyin/src/GeneratorFileDictLoader.php',
+        'Overtrue\\Pinyin\\MemoryFileDictLoader' => __DIR__ . '/..' . '/overtrue/pinyin/src/MemoryFileDictLoader.php',
+        'Overtrue\\Pinyin\\Pinyin' => __DIR__ . '/..' . '/overtrue/pinyin/src/Pinyin.php',
         'PHPUnit\\Exception' => __DIR__ . '/..' . '/phpunit/phpunit/src/Exception.php',
         'PHPUnit\\Framework\\Assert' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Assert.php',
         'PHPUnit\\Framework\\AssertionFailedError' => __DIR__ . '/..' . '/phpunit/phpunit/src/Framework/Exception/AssertionFailedError.php',
