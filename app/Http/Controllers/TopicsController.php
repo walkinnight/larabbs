@@ -10,13 +10,16 @@ use App\Models\Category;
 use App\Handlers\ImageUploadHandler;
 use Auth;
 
-class TopicsController extends Controller
-{
+class TopicsController extends Controller{
+
+
+
     public function __construct()
     {
         $this->middleware('auth', ['except' => ['index', 'show']]);
     }
 
+    //话题首页
     public function index(Request $request, Topic $topic)
     {
         $topics = $topic->withOrder($request->order)
@@ -25,17 +28,21 @@ class TopicsController extends Controller
         return view('topics.index', compact('topics'));
     }
 
+    //话题详情页
     public function show(Topic $topic)
     {
         return view('topics.show', compact('topic'));
     }
 
+    //新加话题
     public function create(Topic $topic)
     {
         $categories = Category::all();
         return view('topics.create_and_edit', compact('topic', 'categories'));
     }
 
+
+    //保存话题
 	public function store(TopicRequest $request,Topic $topic)
 	{
         $topic->fill($request->all());
@@ -44,12 +51,16 @@ class TopicsController extends Controller
 		return redirect()->route('topics.show', $topic->id)->with('message', 'Created successfully.');
 	}
 
+	//编辑话题页
 	public function edit(Topic $topic)
 	{
         $this->authorize('update', $topic);
-		return view('topics.create_and_edit', compact('topic'));
+        $categories = Category::all();
+		return view('topics.create_and_edit', compact('topic','categories'));
 	}
 
+
+	//保存更新
 	public function update(TopicRequest $request, Topic $topic)
 	{
 		$this->authorize('update', $topic);
