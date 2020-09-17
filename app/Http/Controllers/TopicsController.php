@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\TopicRequest;
 use App\Models\Category;
+use App\Models\User;
 use App\Handlers\ImageUploadHandler;
 use Auth;
 
@@ -20,12 +21,13 @@ class TopicsController extends Controller{
     }
 
     //话题首页
-    public function index(Request $request, Topic $topic)
+    public function index(Request $request, Topic $topic,User $user)
     {
         $topics = $topic->withOrder($request->order)
             ->with('user', 'category')  // 预加载防止 N+1 问题
             ->paginate(20);
-        return view('topics.index', compact('topics'));
+        $active_users = $user->getActiveUsers();
+        return view('topics.index', compact('topics','active_users'));
     }
 
     //话题详情页
