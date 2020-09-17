@@ -11,10 +11,12 @@ class ReplyObserver
     //统计回复数
     public function created(Reply $reply)
     {
-        $reply->topic->reply_count = $reply->topic->replies->count();
-        $reply->topic->save();
-        // 通知话题作者有新的评论
-        $reply->topic->user->notify(new TopicReplied($reply));
+        // 命令行运行迁移时不做这些操作！
+        if ( ! app()->runningInConsole()) {
+            $reply->topic->updateReplyCount();
+            // 通知话题作者有新的评论
+            $reply->topic->user->notify(new TopicReplied($reply));
+        }
     }
 
     //过滤xss回复
