@@ -43,6 +43,7 @@ class User extends Authenticatable implements MustVerifyEmailContract
         return $this->hasMany(Reply::class);
     }
 
+    //消息通知
     public function notify($instance)
     {
         // 如果要通知的人是当前用户，就不必通知了！
@@ -57,4 +58,13 @@ class User extends Authenticatable implements MustVerifyEmailContract
 
         $this->laravelNotify($instance);
     }
+
+    //变为已读
+    public function markAsRead()
+    {
+        $this->notification_count = 0;
+        $this->save();
+        $this->unreadNotifications->markAsRead();
+    }
+
 }
