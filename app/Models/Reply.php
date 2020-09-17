@@ -20,4 +20,10 @@ class Reply extends Model
     {
         return $query->orderBy('id', 'desc');
     }
+
+    public function updateReplyCount()
+    {
+        $this->reply_count = $this->replies->count();
+        $this->save();
+    }
 }

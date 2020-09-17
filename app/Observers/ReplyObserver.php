@@ -17,8 +17,15 @@ class ReplyObserver
         $reply->topic->user->notify(new TopicReplied($reply));
     }
 
+    //过滤xss回复
     public function creating(Reply $reply)
     {
         $reply->content = clean($reply->content, 'user_topic_body');
+    }
+
+    //删除回复时回复数减一
+    public function deleted(Reply $reply)
+    {
+        $reply->topic->updateReplyCount();
     }
 }
